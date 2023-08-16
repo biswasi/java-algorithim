@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class PredicateTest {
+	public static void main(String[] args) {
+		List<String> languages=Arrays.asList("java","Scala","C++");
+		System.out.println("Languages start with J");
+		filter(languages,(str)->((String) str).startsWith("j"));
+		//combine predicate
+		Predicate<String> startsWithJ = (n) -> n.startsWith("J");
+		Predicate<String> fourLetterLong = (n) -> n.length() == 4;
+    languages.stream().filter(startsWithJ.and(fourLetterLong)).forEach((n)-> System.out.println
+        		("Name which starts with j and 4 letter long  is :"+n));
+        
+    List<Integer> costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);
+    double total = 0; for (Integer cost : costBeforeTax) { double price = cost + .12*cost; total = total + price; }
+
+    double bill = costBeforeTax.stream() .map((cost) -> cost + .12*cost) .reduce((sum, cost) -> sum + cost).get();
+    System.out.println("Total : " + bill);
+	}
+	
+	public static void filter(List<String>names,Predicate condition)
+	{
+		for(String name:names)
+		{
+			if(condition.test(name))
+					{
+				System.out.println(name+ " ");
+					}
+		}
+	}
+	
+}
