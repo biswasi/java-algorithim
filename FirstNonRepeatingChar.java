@@ -31,11 +31,9 @@ public class FirstNonRepeatingChar {
 	
 	//array with duplicate
 	static int solutionFirstDuplicate(int[] array) {
-	    int minimumIndex = -1; 
-	 
+	    int minimumIndex = -1; 	 
 			// Creates an empty hashset 
-			HashSet<Integer> set = new HashSet<>(); 
-	 
+			HashSet<Integer> set = new HashSet<>(); 	 
 			// Iterate over the input array from right to left 
 			for (int i=0; i<array.length; i++) 
 			{ 
@@ -48,9 +46,7 @@ public class FirstNonRepeatingChar {
 				else   // Else add element to hash set 
 					set.add(array[i]); 
 			} 
-			return -1;
-	    
+			return -1;	    
 
 	}
-
 }
