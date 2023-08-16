@@ -9,14 +9,12 @@ System.out.println(sortedMergedList);
  mergeTwoSortedArray(firstArray,secondArray);
 }
 
-
 public static void mergeTwoSortedArray(List<Integer> A,List<Integer> B)
 	{
 		int a=A.size() -1;int b=B.size() -1;
 		int writeIndex=A.size()+B.size() -1;
 		//System.out.println("Write Index="+writeIndex);
 		List<Integer> mergeArray = new ArrayList<Integer>(writeIndex);
-		
 		while( a>=0 && b>=0)
 		{
 			mergeArray.add(A.get(a) > B.get(b) ? A.get(a--):B.get(b--));
