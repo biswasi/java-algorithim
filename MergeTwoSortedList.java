@@ -4,8 +4,10 @@ List<Integer> firstArray= new ArrayList<>(Arrays.asList(1,
                 2, 
                 9));
 List<Integer> secondArray =new ArrayList<>(Arrays.asList(2,6,10));
+	//Using Lambda
 List<Integer> sortedMergedList=Stream.of(firstArray,secondArray).flatMap(n->n.stream()).sorted().collect(Collectors.toList());
 System.out.println(sortedMergedList);
+	//Other way
  mergeTwoSortedArray(firstArray,secondArray);
 }
 
