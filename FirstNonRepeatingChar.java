@@ -3,11 +3,10 @@ import java.util.HashSet;
 public class FirstNonRepeatingChar {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		char output=solution("FatherF");
+		char output=solution("FatherMother");
 		System.out.println("First No repeating char :"+output);
-		char output1=solutionFisrtDuplicate("Fathert");
-		System.out.println("First repeating char :"+output1);
+		char outputFirstDuplicate=solutionFisrtDuplicate("Fathert");
+		System.out.println("First repeating char :"+outputFirstDuplicate);
 		int array[] = {10, 7, 8, 1, 8, 7, 6}; 
 		int min=solutionFirstDuplicate(array); 
 
