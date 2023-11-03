@@ -30,9 +30,10 @@ stack.push(String.valueOf(b / a));
 break;
 }
 }
+}
 
 returnValue = Integer.valueOf(stack.pop());
 return returnValue;
 }
 }
-}
+
