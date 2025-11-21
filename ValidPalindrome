@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Solution{
+    public static boolean isPalindrome(String string) {
+        
+        // Replace this placeholder return statement with your code
+        int start =0;
+        int end =string.length()-1;
+        int count =0;
+        boolean isPalindrome=true;
+        
+        while (start<=end)
+        {
+            if (string.charAt(start) != string.charAt(end)){
+                  if (count<1 && string.charAt(start) == string.charAt(end-1))
+                  {
+                      count++;
+                      end=end-1;
+                  }
+                  else{
+                   isPalindrome=false;
+                  
+                  }
+            }
+                
+            start++;
+            end--;
+           
+        }
+        return isPalindrome;
+    }
+}
