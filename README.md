@@ -1,1 +1,1 @@
-# java-algorithim
+# Problem solving - Java-algorithim
